@@ -28,9 +28,15 @@ function Table({ data }: Props) {
         };
     }, []);
 
-    const paginatedData = data.slice(
-        currentPage * pageSize,
-        (currentPage + 1) * pageSize
+    const addIndexToData = (data: Data[]): (Data & { index: number })[] => {
+        return data.map((item, index) => ({
+            ...item,
+            index: index + 1 + currentPage * pageSize, // Índice sequencial considerando a paginação
+        }));
+    };
+
+    const paginatedData = addIndexToData(
+        data.slice(currentPage * pageSize, (currentPage + 1) * pageSize)
     );
 
     const handlePageClick = ({ selected }: { selected: number }) => {
@@ -41,7 +47,7 @@ function Table({ data }: Props) {
         <div className="w-full h-auto overflow-x-auto mt-8 bg-white pb-10 rounded-xl md:text-left relative">
             <div className="absolute top-8 left-6">
             </div>
-            <h1 className="text-18px font-bold font-montserrat mb-4 py-6 md:text-22px ml-20">
+            <h1 className="text-18px font-bold font-montserrat mb-4 py-12 md:text-22px ml-16">
                 Lista de Restaurantes
             </h1>
             <DataTable

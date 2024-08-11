@@ -5,4 +5,5 @@ export interface Data {
   email: string;
   phone: string;
   foodType: string;
+  instagram: string;
 }

@@ -16,6 +16,7 @@ const Modal: React.FC<Props> = ({ isOpen, onClose }) => {
     email: "",
     phone: "",
     foodType: "",
+    instagram: "",
   });
 
   function postNew(e: any) {
@@ -110,6 +111,14 @@ const Modal: React.FC<Props> = ({ isOpen, onClose }) => {
                 placeholder="Tipo de Comida"
                 onChange={(e) => setData({ ...data, foodType: e.target.value })}
                 value={data.foodType}
+                required
+              />
+              <input
+                type="text"
+                className="border border-gray-300 rounded px-4 py-2 mb-4 w-full"
+                placeholder="Instagram"
+                onChange={(e) => setData({ ...data, instagram: e.target.value })}
+                value={data.instagram}
                 required
               />
               <Button />
