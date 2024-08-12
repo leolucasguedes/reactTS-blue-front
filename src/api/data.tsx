@@ -5,7 +5,7 @@ export const columns: TableColumn<Data & { index: number }>[] = [
   {
     name: "N°",
     selector: (row) => `${row.index}°`,
-    width: "55px",
+    width: "70px",
   },
   {
     name: "Nome",
@@ -20,7 +20,7 @@ export const columns: TableColumn<Data & { index: number }>[] = [
   {
     name: "Email",
     selector: (row) => row.email,
-    width: "250px",
+    width: "240px",
   },
   {
     name: "Telefone",
@@ -30,7 +30,7 @@ export const columns: TableColumn<Data & { index: number }>[] = [
   {
     name: "Tipo",
     selector: (row) => row.foodType,
-    width: "150px",
+    width: "145px",
   },
   {
     name: "Instagram",
@@ -43,12 +43,12 @@ export const mobileColumns: TableColumn<Data & { index: number }>[] = [
   {
     name: "N°",
     selector: (row) => `${row.index}°`,
-    width: "55px",
+    width: "70px",
   },
   {
     name: "Nome",
     selector: (row) => row.name,
-    width: "200px",
+    width: "185px",
   },
   {
     name: "Telefone",
