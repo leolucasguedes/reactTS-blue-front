@@ -4,6 +4,7 @@ import Table from "../components/DataTable";
 import { FaRegSquarePlus } from "react-icons/fa6";
 import Modal from "../components/CreateModal";
 import { Data } from "../types";
+import ExportButton from "../components/ExportButton";
 
 function MainPage() {
   const [restaurants, setRestaurants] = useState<Data[]>([]);
@@ -88,6 +89,9 @@ function MainPage() {
           <label className="text-custom-gray2 text-14px font-poppins ml-2 dark:text-white">
             Restaurantes com Instagram
           </label>
+        </div>
+        <div className="absolute top-32 right-0 z-30">
+          <ExportButton usersAll={restaurants} />
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
