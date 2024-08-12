@@ -48,7 +48,7 @@ function Table({ data }: Props) {
             <div className="absolute top-8 left-6">
             </div>
             <h1 className="text-18px font-bold font-montserrat mb-4 py-12 md:text-22px ml-16">
-                Lista de Restaurantes ({paginatedData.length})
+                Lista de Restaurantes ({data.length})
             </h1>
             <DataTable
                 className="sm:px-4"
