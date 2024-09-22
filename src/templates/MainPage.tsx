@@ -73,7 +73,7 @@ function MainPage() {
             }}
             className="ml-2 cursor-pointer"
           />
-          <label className="text-custom-gray2 text-14px font-poppins ml-2 dark:text-white">
+          <label className="text-custom-gray2 text-14px font-poppins ml-2 dark:text-white overflow-hidden overflow-ellipsis whitespace-nowrap">
             Restaurantes com E-mail
           </label>
         </div>
@@ -86,7 +86,7 @@ function MainPage() {
             }}
             className="ml-2 cursor-pointer"
           />
-          <label className="text-custom-gray2 text-14px font-poppins ml-2 dark:text-white">
+          <label className="text-custom-gray2 text-14px font-poppins ml-2 dark:text-white overflow-hidden overflow-ellipsis whitespace-nowrap">
             Restaurantes com Instagram
           </label>
         </div>
